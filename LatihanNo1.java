@@ -19,6 +19,11 @@ public class LatihanNo1 {
         System.out.print("Masukkan karakter ketiga: ");
         char char3 = scanner.next().charAt(0);
 
+        if(char1 < 'a' || char1 > 'z' || char2 < 'a' || char2 > 'z' || char3 < 'a' || char3 > 'z') {
+            System.out.println("\nInput harus berupa huruf kecil.");
+            return;
+        }
+
         boolean isKonsonanVokalKonsonan = isKonsonan(char1) && isVokal(char2) && isKonsonan(char3);
 
         if (isKonsonanVokalKonsonan) {
